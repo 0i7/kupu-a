@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+  <!-- Pastel -->
+  <meta charset="utf-8">
+  <title>{site_title_sub2}{site_title}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+  <meta name="description" content="{page_summary}">
+  <meta name="keywords" content="{site_keywords}">
+
+  <meta property="og:title" content="{site_og_title}">
+  <meta property="og:image" content="{site_og_image}">
+  <meta property="og:site_name" content="{site_title}">
+  {favicon_url}
+  <link rel="alternate" type="application/rss+xml" title="{site_title} / RSS" href="{site_rss}">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:400,700 | PT+Sans+Caption:400,700'>
+  <link rel="stylesheet" href="{site_css}">
+  <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/slick/slick.css">
+
+  <script src="/assets/jquery/jquery-1.9.1.min.js"></script>
+  <script src="/assets/clipsquareimage/jquery.clipsquareimage.js"></script>
+</head>
+
+<body id="{body_id}">
+
+  <div id="container">
+
+    <!-- #header -->
+    <div id="header" class="cd-header">
+      <div class="inner">
+
+      <div class="element shop_tel" data-shoptel="{tel}">
+        <div>
+          <i class="fa fa-phone-square"></i>&nbsp;{tel}
+        </div>
+      </div>
+
+      <div class="header_social_wrap">
+         <!-- BEGIN twitter_button -->
+        <a href="{twitter_url}" target="_blank">
+          <span class="icon-twitter"></span>
+        </a>
+        <!-- END twitter_button -->
+        <!-- BEGIN facebook_button -->
+        <a href="{facebook_url}" target="_blank">
+          <span class="icon-facebook"></span>
+        </a>
+        <!-- END facebook_button -->
+
+        <!-- BEGIN instagram_button -->
+        <a href="{instagram_url}" target="_blank">
+          <span class="icon-instagram"></span>
+        </a>
+        <!-- END instagram_button -->
+      </div>
+
+      <div class="element navi pc">
+        <ul class="navi_list">
+
+          <!-- BEGIN footer_navi_list -->
+          <li class="{footer_navi_class}">
+            <a href="{footer_navi_url}" {navi_target}>{footer_navi_title}</a>
+          </li>
+          <!-- END footer_navi_list -->
+
+        </ul>
+      </div>
+      <!-- /#navi -->
+
+      <div id="button_navi">
+        <div class="navi_trigger cd-primary-nav-trigger">
+          <img class="menu_btn" src="/img/theme_pastel/menu_btn.png">
+          <img class="menu_close_btn" src="/img/theme_pastel/menu_close_btn.png">
+        </div>
+      </div>
+
+      </div>
+      <!-- /.inner -->
+
+      <div class="navi mobile"></div>
+
+    </div>
+    <!-- /#header -->
+
+
+    <div id="content">
+
+<!-- CONTENT ----------------------------------------------------------------------- -->
+
+  <h1 class="element logo">
+    <a href="{site_url}">{site_logo}</a>
+  </h1>
+
+  <!-- BEGIN page_title -->
+  <h2 class="page_title">
+    {page_title}
+  </h2>
+  <!-- END page_title -->
+
+
+  <!-- BEGIN navi_sub_list -->
+    {navi_sub_list}
+  <!-- END navi_sub_list -->
+
+
+
+<!-- BEGIN top -->
+<!----------------------------------------------
+ページ：トップ
+---------------------------------------------->
+<script>
+  var slideshowInt = '{slideshow_time}';
+  slideshowInt = (slideshowInt === '') ? 4000 : parseInt(slideshowInt);
+
+  var slideshow = {
+      interval: slideshowInt
+  }
+</script>
+
+<script src="/js/theme_pastel/top.js?20151028"></script>
+
+<div id="wrap_slider">
+  <!-- BEGIN slideshow -->
+  <div class="rslides {slideshow_part_active}" id="slider">
+    <!-- BEGIN slideshow_parts -->
+    <div class="article">
+      {slideshow_part_image_l_linked}
+      <div class="caption">
+        <div class="caption_txt">
+          <a href="{slideshow_part_link}">{slideshow_part_comment}</a>
+        </div>
+      </div>
+    </div>
+    <!-- END slideshow_parts -->
+  </div>
+  <!-- END slideshow -->
+</div>
+
+<div class="section welcomemessage">
+  <div class="inner">
+
+    <div class="element site_description">
+      <span>{site_description}</span>
+    </div>
+
+    <div class="message textfield">
+      {message}
+    </div>
+
+  </div>
+</div>
+
+<div class="section information">
+  <div class="inner">
+    <div class="list">
+      <!-- BEGIN top_info_list -->
+      <a class="article" href="{top_info_url}">
+        <span class="photo">{top_info_photo_l}</span>
+        <span class="summary">
+          <span class="inner">
+            <span class="date">
+              {top_info_year}<span> / </span>{top_info_month}<span> / </span>{top_info_day}
+            </span>
+            <div class="date_underline"></div>
+            <div class="title">{top_info_title}</div>
+          </span>
+        </span>
+      </a>
+      <!-- END top_info_list -->
+    </div>
+  </div>
+</div>
+
+<!-- END top -->
+
+
+<!-- BEGIN info -->
+<!----------------------------------------------
+ページ：インフォメーション
+---------------------------------------------->
+<div class="inner">
+
+  <!-- .autopagerize_page_element -->
+  <div class="autopagerize_page_element">
+
+    <!-- BEGIN info_list -->
+    <!-- .article -->
+    <div class="article">
+
+      <div class="body">
+
+        <h3 class="article_title">
+          <a href="{info_url}">{info_title}</a>
+        </h3>
+
+        <div class="date">
+          {info_year}<span> / </span>{info_month}<span> / </span>{info_day}&nbsp;&nbsp;{info_time}
+        </div>
+
+        <div class="photo">
+          {info_photo_o}
+        </div>
+
+        <div class="textfield">
+          {info_body}
+        </div>
+      </div>
+
+    </div>
+    <!-- /.article -->
+    <!-- END info_list -->
+
+  </div>
+  <!-- /.autopagerize_page_element -->
+
+</div>
+<!-- /.inner -->
+
+<!-- END info -->
+
+
+<!-- BEGIN photo -->
+<!----------------------------------------------
+ページ：フォト
+---------------------------------------------->
+<script src="/js/theme_pastel/photo.js?20151028"></script>
+
+<div class="inner">
+
+  <div id="index">
+    <!-- BEGIN photo_album -->
+    <div class="album">
+      <h3 class="album_title">
+        <span><a href="{photo_album_url}">{photo_album_name}</a></span>
+      </h3>
+
+      <!-- BEGIN photo_album_items -->
+      <div class="thumb">
+        <a href="{photo_url_o}" class="thickbox" rel="{photo_album_id}">{photo_image_l}</a>
+      </div>
+      <!-- END photo_album_items -->
+    </div>
+    <!-- END photo_album -->
+  </div>
+
+  <div id="entries">
+    <!-- BEGIN photo_list -->
+<!--     <h3>{photo_album_name}</h3> -->
+
+    <div class="autopagerize_page_element">
+
+      <!-- BEGIN photo_list_items -->
+      <div class="article">
+
+        <h4>
+          {photo_list_title}
+        </h4>
+
+        <div class="date">
+          {photo_list_date}
+        </div>
+
+        <div class="photo">
+          {photo_list_image_o}
+        </div>
+
+        <div class="textfield">
+          {photo_list_body}
+        </div>
+
+      </div>
+      <!-- END photo_list_items -->
+
+    </div>
+    <!-- END photo_list -->
+  </div>
+
+</div>
+<!-- /.inner -->
+
+<!-- END photo -->
+
+
+<!-- BEGIN menu -->
+<!----------------------------------------------
+ページ：メニュー
+---------------------------------------------->
+<script src="/js/theme_pastel/menu.js?20151028"></script>
+
+<div class="inner">
+
+  <!-- BEGIN menu_list -->
+  <div class="list">
+    <div class="category_title">
+      <span>{menu_category_name}</span>
+    </div>
+    <div class="category_title_underline"></div>
+
+    <!-- BEGIN menu_list_items -->
+    <div class="article">
+
+      <h3 class="article_title">
+        <span class="recommend">{menu_recommend}</span>{menu_title}
+      </h3>
+
+      <div class="price">
+        {menu_price}{menu_price_unit}{menu_over_flg}
+      </div>
+
+      <div class="photo">
+        <img src="{menu_photo_url_o}" alt="" />
+      </div>
+
+      <div class="text textfield">
+        {menu_body}
+      </div>
+    </div>
+    <!-- /.article -->
+    <!-- END menu_list_items -->
+
+  </div>
+  <!-- END menu_list -->
+
+</div>
+<!-- /.inner -->
+<!-- END menu -->
+
+
+<!-- BEGIN calendar -->
+<!----------------------------------------------
+ページ：カレンダー
+---------------------------------------------->
+<script src="/js/theme_pastel/calendar.js?20151028"></script>
+
+<div class="inner">
+
+    <!-- BEGIN calendar_month -->
+    <div class="wrap_calendar">
+      <div class="navi">
+      {calendar_navi}
+      </div>
+      {calendar}
+    </div>
+
+    <div class="schedule">
+      <!-- BEGIN calendar_schedule -->
+
+      <dl class="article" id="{calendar_date}">
+        <dt class="date">
+          {schedule_date}
+        </dt>
+
+        <!-- BEGIN calendar_schedule_items -->
+        <dd>
+          <span class="category">{schedule_category}</span> <a href="{schedule_url}"><span class="schedule_time">{schedule_time}</span> <span class="schedule_title">{schedule_title}</span></a>
+        </dd>
+        <!-- END calendar_schedule_items -->
+      </dl>
+      <!-- END calendar_schedule -->
+    </div>
+    <!-- END calendar_month -->
+
+
+    <!-- BEGIN schedule_detail -->
+    <div class="details">
+
+      <h3>{schedule_detail_title}</h3>
+
+      <div class="date">
+        {schedule_detail_date}
+      </div>
+
+      <div class="image">
+        {schedule_detail_photo_o}
+      </div>
+
+      <div class="body textfield">
+        {schedule_detail_body}
+      </div>
+
+    </div>
+    <!-- END schedule_detail -->
+
+</div>
+<!-- /.inner -->
+
+<!-- END calendar -->
+
+
+<!-- BEGIN about -->
+<!----------------------------------------------
+ページ：アバウト
+---------------------------------------------->
+<div class="inner">
+
+  <div class="map">
+    {map}
+  </div>
+
+  <div class="summary">
+    {about_all}
+  </div>
+
+</div>
+<!-- /.inner -->
+
+<!-- END about -->
+
+
+<!-- BEGIN contact -->
+<!----------------------------------------------
+ページ：お問い合わせ
+---------------------------------------------->
+<div class="inner">
+
+  <form name="frm" method="post" action="{contact_action}" class="contact_form">
+
+    <!-- BEGIN contact_message -->
+    <div class="message">
+      {contact_message}
+    </div>
+    <!-- END contact_message -->
+
+    <input type="hidden" name="hash" value="{hash}" />
+
+<!--    <div class="contact_form">-->
+      {question}
+      <input type="submit" value="送信" class="button" tabindex="5" />
+<!--    </div>-->
+
+    <div class="personal_info">
+      個人情報の保護について <br>
+      <p class="personal_info_txt">
+        インターネットを通じて当ウェブサイトの「お問い合わせ」をご利用いただいた際に、必要な情報の元となるお客様の個人情報の取扱いを行いますが、お客様の個人情報を、お客様の同意なしに第三者に開示することはありません。
+      </p>
+    </div>
+
+  </form>
+
+</div>
+<!-- /.inner -->
+
+<!-- END contact -->
+
+
+<!-- BEGIN coupon -->
+<!----------------------------------------------
+ページ：クーポン
+---------------------------------------------->
+<script src="/js/theme_pastel/coupon.js"></script>
+
+<div class="inner">
+    <div class="autopagerize_page_element">
+
+      <!-- BEGIN coupon_list -->
+      <div class="article">
+        <div class="image" data-image="{coupon_photo_url_l}"></div>
+
+        <div class="summary">
+
+          <div class="qrcode">
+            {coupon_qr_code}
+          </div>
+
+          <h3 class="article_title">
+            {coupon_title}
+          </h3>
+
+          <ul class="text">
+            <li>提示方法：<span>{coupon_teiji}</span></li>
+            <li>利用条件：<span>{coupon_how}</span></li>
+            <li>有効期限：<span>{coupon_date}</span></li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- END coupon_list -->
+
+    </div>
+
+    <div class="print">
+      <a href="{coupon_print_url}" target="_blank">このページを印刷する</a>
+    </div>
+
+</div>
+<!-- /.inner -->
+
+<!-- END coupon -->
+
+
+<!-- BEGIN reservation -->
+<!----------------------------------------------
+ページ：予約ページ
+---------------------------------------------->
+<script src="/js/theme_pastel/reservation.js?20151028"></script>
+
+<div class="inner">
+
+  <!--<div class="form_area_line"></div>-->
+
+  <!-- BEGIN reservation_form -->
+<!--  <div class="form">-->
+
+  <form name="frm" method="post" action="{reserve_action}">
+    <!-- BEGIN reservation_message -->
+    <div class="message">
+      {reservation_message}
+    </div>
+    <!-- END reservation_message -->
+
+    <input type="hidden" name="hash" value="{hash}" />
+
+    {reserve_form}
+    {reserve_button}
+  </form>
+
+<!--  </div>-->
+  <!-- END reservation_form -->
+
+
+  <div class="list">
+    <!-- BEGIN reservation_info -->
+    <div class="info">
+      <div class="note">{reservation_others}</div>
+
+      <div class="summary">
+        <div class="tel">
+          電話番号：{reservation_header_tel}
+        </div>
+
+        <div class="time">
+          {reservation_tel_time}
+        </div>
+      </div>
+    </div>
+    <!-- END reservation_info -->
+
+    <div class="articles">
+      <!-- BEGIN reservation_list -->
+      <div class="article">
+        <div class="image" data-image="{reservation_photo_url_l}"></div>
+
+        <div class="summary">
+          <h3 class="article_title">
+            {reservation_title}
+          </h3>
+
+          <div class="text">
+            {reservation_course}
+          </div>
+        </div>
+      </div>
+      <!-- END reservation_list -->
+    </div>
+  </div>
+
+</div>
+<!-- /.inner -->
+<!-- END reservation -->
+
+
+<!-- BEGIN free -->
+<!----------------------------------------------
+ページ：フリーページ
+---------------------------------------------->
+<div class="inner">
+  <div class="textfield">
+    {free_body}
+  </div>
+</div>
+<!-- /.inner -->
+
+<!-- END free -->
+
+<!-- CONTENT ----------------------------------------------------------------------- -->
+
+    <!-- BEGIN page -->
+    <div class="autopagerize_insert_before"></div>
+
+    <div class="pager">
+      <div class="inner">
+        <div>
+          {pager}
+        </div>
+      </div>
+    </div>
+    <!-- END page -->
+
+    <div class="gadgets">
+      <div class="inner">
+      </div>
+    </div>
+
+    <ul class="info_footer_sub_navi">
+      <!-- BEGIN navi_list -->
+      <li>
+        {navi_sub}
+      </li>
+      <!-- END navi_list -->
+    </ul>
+
+    <div class="social">
+      <div class="inner">{navi_parts}</div>
+    </div>
+
+    </div>
+    <!-- /#content -->
+
+
+    <div id="footer">
+      <div class="inner">
+        <div class="pastel_copyright">
+          &copy;{year} <a href="{site_url}">{name}</a>. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /#container -->
+
+  <script src="/assets/colorbox/jquery.colorbox-min.js"></script>
+  <script src="/js/tooltip.js"></script>
+  <script src="/assets/slick/slick.js"></script>
+  <script src="/assets/lineup/jquery-lineup.min.js"></script>
+  <script src="/assets/tile/tile.js"></script>
+  <script src="/js/theme_pastel/init.js?20170511"></script>
+</body>
+</html>
